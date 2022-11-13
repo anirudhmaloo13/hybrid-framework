@@ -1,42 +1,19 @@
 package com.brillio.test;
 
-import java.time.Duration;
+
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
+
 import org.testng.annotations.Test;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
+import com.brillio.base.WebDriverWrapper;
 
-public class Login {
-	
-	WebDriver driver;
-	
-	@BeforeMethod
-	// Before Method will trigger before each test method
-	public void setup()
-	{
-       WebDriverManager.chromedriver().setup();
-		
-	    driver= new ChromeDriver();
-		
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-		
-		driver.get("https://demo.openemr.io/openemr/interface/login/login.php?site=default");
-	}
+
+public class Login extends WebDriverWrapper{
 	
 	
-	@AfterMethod
-	//  After Method will trigger after each test method
-	public void teardown()
-	{
-		driver.quit();
-	}
 
 	@Test(priority = 1)
 	
@@ -64,4 +41,6 @@ public class Login {
 		
 		Assert.assertEquals(actualerror, "Invalid username or password");
 	}
+
+	
 }
