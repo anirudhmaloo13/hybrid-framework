@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="48845" started-at="2022-11-13T06:18:04Z" finished-at="2022-11-13T06:18:53Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="48845" started-at="2022-11-13T06:18:04Z" finished-at="2022-11-13T06:18:53Z">
+      <class name="com.brillio.test.Login">
+        <test-method status="PASS" signature="invalidCredentialTest()[pri:0, instance:com.brillio.test.Login@31610302]" name="invalidCredentialTest" duration-ms="28196" started-at="2022-11-13T06:18:04Z" finished-at="2022-11-13T06:18:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- invalidCredentialTest -->
+        <test-method status="PASS" signature="validCredentialTest()[pri:0, instance:com.brillio.test.Login@31610302]" name="validCredentialTest" duration-ms="20596" started-at="2022-11-13T06:18:32Z" finished-at="2022-11-13T06:18:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validCredentialTest -->
+      </class> <!-- com.brillio.test.Login -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
