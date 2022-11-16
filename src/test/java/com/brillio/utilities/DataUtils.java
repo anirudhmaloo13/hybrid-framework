@@ -1,12 +1,13 @@
 package com.brillio.utilities;
 
 import java.io.IOException;
+import java.lang.reflect.Method;
 
 import org.testng.annotations.DataProvider;
 
 public class DataUtils {
 	
-	@DataProvider
+	/*@DataProvider
 	public Object[][] validdata(){
 		
 		Object[][] main=new Object[2][4];
@@ -24,13 +25,23 @@ public class DataUtils {
 		
 		return main;
 		
-	}
-	    @DataProvider
-        public Object[][] invaliddata() throws IOException{
+	}*/
+	//    @DataProvider
+     //   public Object[][] invaliddata() throws IOException{
 		
-	    Object[][] main=ExcelUtils.getSheetIntoTwoDimArray("test-data/Test data for Invalid Credentential.xlsx", "invaliddata");
+	//    Object[][] main=ExcelUtils.getSheetIntoTwoDimArray("test-data/Test data for Invalid Credentential.xlsx", "invaliddata");
+		
+	//	return main;
+	
+	@DataProvider
+       public Object[][] commonDataProvider(Method method) throws IOException{
+		
+		// current test method name is the sheetname
+		String testMethodName= method.getName();
+		
+	    Object[][] main=ExcelUtils.getSheetIntoTwoDimArray("test-data/Test data for Invalid Credentential.xlsx", testMethodName);
 		
 		return main;
-		
+	
 	}
 }

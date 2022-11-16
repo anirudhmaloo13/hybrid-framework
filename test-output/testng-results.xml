@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="1" total="4" passed="3">
+<testng-results skipped="0" failed="2" ignored="1" total="3" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="73392" started-at="2022-11-15T17:49:54Z" finished-at="2022-11-15T17:51:08Z">
+  <suite name="Default suite" duration-ms="84355" started-at="2022-11-16T16:08:49Z" finished-at="2022-11-16T16:10:14Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="73392" started-at="2022-11-15T17:49:54Z" finished-at="2022-11-15T17:51:08Z">
+    <test name="Default test" duration-ms="84355" started-at="2022-11-16T16:08:49Z" finished-at="2022-11-16T16:10:14Z">
       <class name="com.brillio.test.Login">
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.brillio.test.Login@eec5a4a]" name="setup" is-config="true" duration-ms="28099" started-at="2022-11-15T17:49:57Z" finished-at="2022-11-15T17:50:25Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.brillio.test.Login@eec5a4a]" name="setup" is-config="true" duration-ms="34272" started-at="2022-11-16T16:08:52Z" finished-at="2022-11-16T16:09:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="invalidCredentialTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.brillio.test.Login@eec5a4a]" name="invalidCredentialTest" duration-ms="4649" started-at="2022-11-15T17:50:25Z" data-provider="invaliddata" finished-at="2022-11-15T17:50:30Z">
+        <test-method status="FAIL" signature="validCredentialTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.brillio.test.Login@eec5a4a]" name="validCredentialTest" duration-ms="21180" started-at="2022-11-16T16:09:27Z" data-provider="commonDataProvider" finished-at="2022-11-16T16:09:48Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[admin1]]>
+                <![CDATA[admin]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[test1]]>
+                <![CDATA[pass]]>
               </value>
             </param>
             <param index="2">
@@ -34,27 +34,68 @@
               </value>
             </param>
           </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Invalid username or password] but found [OpenEMR]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Invalid username or password] but found [OpenEMR]
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:453)
+at org.testng.Assert.assertEquals(Assert.java:463)
+at com.brillio.test.Login.validCredentialTest(Login.java:31)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- invalidCredentialTest -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:com.brillio.test.Login@eec5a4a]" name="teardown" is-config="true" duration-ms="1432" started-at="2022-11-15T17:50:30Z" finished-at="2022-11-15T17:50:31Z">
+        </test-method> <!-- validCredentialTest -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.brillio.test.Login@eec5a4a]" name="teardown" is-config="true" duration-ms="1350" started-at="2022-11-16T16:09:48Z" finished-at="2022-11-16T16:09:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.brillio.test.Login@eec5a4a]" name="setup" is-config="true" duration-ms="12438" started-at="2022-11-15T17:50:31Z" finished-at="2022-11-15T17:50:43Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.brillio.test.Login@eec5a4a]" name="setup" is-config="true" duration-ms="12544" started-at="2022-11-16T16:09:49Z" finished-at="2022-11-16T16:10:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="invalidCredentialTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.brillio.test.Login@eec5a4a]" name="invalidCredentialTest" duration-ms="3386" started-at="2022-11-15T17:50:43Z" data-provider="invaliddata" finished-at="2022-11-15T17:50:47Z">
+        <test-method status="FAIL" signature="validCredentialTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.brillio.test.Login@eec5a4a]" name="validCredentialTest" duration-ms="10814" started-at="2022-11-16T16:10:02Z" data-provider="commonDataProvider" finished-at="2022-11-16T16:10:12Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[admin2]]>
+                <![CDATA[physician]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[test2]]>
+                <![CDATA[physician]]>
               </value>
             </param>
             <param index="2">
@@ -68,44 +109,51 @@
               </value>
             </param>
           </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Invalid username or password] but found [OpenEMR]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Invalid username or password] but found [OpenEMR]
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:453)
+at org.testng.Assert.assertEquals(Assert.java:463)
+at com.brillio.test.Login.validCredentialTest(Login.java:31)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- invalidCredentialTest -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:com.brillio.test.Login@eec5a4a]" name="teardown" is-config="true" duration-ms="1310" started-at="2022-11-15T17:50:47Z" finished-at="2022-11-15T17:50:48Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.brillio.test.Login@eec5a4a]" name="setup" is-config="true" duration-ms="14724" started-at="2022-11-15T17:50:48Z" finished-at="2022-11-15T17:51:03Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="invalidCredentialTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.brillio.test.Login@eec5a4a]" name="invalidCredentialTest" duration-ms="3385" started-at="2022-11-15T17:51:03Z" data-provider="invaliddata" finished-at="2022-11-15T17:51:06Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[admin3]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[test3]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Dutch]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[Invalid username or password]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- invalidCredentialTest -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:com.brillio.test.Login@eec5a4a]" name="teardown" is-config="true" duration-ms="1380" started-at="2022-11-15T17:51:06Z" finished-at="2022-11-15T17:51:08Z">
+        </test-method> <!-- validCredentialTest -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.brillio.test.Login@eec5a4a]" name="teardown" is-config="true" duration-ms="1261" started-at="2022-11-16T16:10:12Z" finished-at="2022-11-16T16:10:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->

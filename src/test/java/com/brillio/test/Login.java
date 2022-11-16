@@ -14,10 +14,8 @@ import com.brillio.utilities.DataUtils;
 
 public class Login extends WebDriverWrapper{
 	
-	
-	
 
-	@Test(dataProvider = "validdata", dataProviderClass= DataUtils.class)
+	@Test(dataProvider = "commonDataProvider", dataProviderClass= DataUtils.class)
 	
 	public void validCredentialTest(String username, String password, String language, String expectedTitle)
 	{
@@ -33,7 +31,7 @@ public class Login extends WebDriverWrapper{
 		Assert.assertEquals(actualtitle, expectedTitle);
 	}
 	
-	@Test(dataProvider = "invaliddata", dataProviderClass= DataUtils.class)
+	@Test(dataProvider = "commonDataProvider", dataProviderClass= DataUtils.class)
 	
 	public void invalidCredentialTest(String username, String password, String language, String expectedTitle)
 	{

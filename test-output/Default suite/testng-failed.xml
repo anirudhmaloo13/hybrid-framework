@@ -6,8 +6,8 @@
       <class name="com.brillio.test.Login">
         <methods>
           <include name="teardown"/>
+          <include name="validCredentialTest" invocation-numbers="0 1"/>
           <include name="setup"/>
-          <include name="invalidCredentialTest" invocation-numbers="0 1 2"/>
         </methods>
       </class> <!-- com.brillio.test.Login -->
     </classes>
