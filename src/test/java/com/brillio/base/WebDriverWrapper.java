@@ -8,6 +8,8 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Optional;
+import org.testng.annotations.Parameters;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -15,19 +17,20 @@ public class WebDriverWrapper {
     protected  WebDriver driver;
 	
 	@BeforeMethod
+	@Parameters({"browser"})
 	// Before Method will trigger before each test method
-	public void setup()
+	public void setup(@Optional("ch") String browsername)
 	{
 		
-		String browser="edge";
+		// String browser="ch";
 		
-		if (browser.equalsIgnoreCase("edge"))
+		if (browsername.equalsIgnoreCase("edge"))
 		{
 			WebDriverManager.edgedriver().setup();
 			driver= new EdgeDriver();
 		}
 		
-		else if(browser.equalsIgnoreCase("firefox"))
+		else if(browsername.equalsIgnoreCase("firefox"))
 		{
 			WebDriverManager.firefoxdriver().setup();
 			driver= new FirefoxDriver();
