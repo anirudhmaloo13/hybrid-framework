@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\anirudh.maloo\AppData\Local\Temp\testng-eclipse--202189621\testng-customsuite.xml</span>
+                    <span>C:\Users\anirudh.maloo\AppData\Local\Temp\testng-eclipse--1403216759\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">1 method,   1 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,12 +102,7 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.brillio.test.Login" hash-for-method="validCredentialTest(admin, pass, English (Indian), OpenEMR)">validCredentialTest(admin, pass, English (Indian), OpenEMR)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.brillio.test.Login" hash-for-method="validCredentialTest(physician, physician, Dutch, OpenEMR)">validCredentialTest(physician, physician, Dutch, OpenEMR)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.brillio.test.LoginUITest" hash-for-method="validateLoginTitle">validateLoginTitle</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -125,23 +120,14 @@
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.brillio.test.Login</span>
+              <span class="class-name">com.brillio.test.LoginUITest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="validCredentialTest(admin, pass, English (Indian), OpenEMR)">
-                  </a> <!-- validCredentialTest(admin, pass, English (Indian), OpenEMR) -->
-                  <span class="method-name">validCredentialTest</span>
-                  <span class="parameters">(admin, pass, English (Indian), OpenEMR)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="validCredentialTest(physician, physician, Dutch, OpenEMR)">
-                  </a> <!-- validCredentialTest(physician, physician, Dutch, OpenEMR) -->
-                  <span class="method-name">validCredentialTest</span>
-                  <span class="parameters">(physician, physician, Dutch, OpenEMR)</span>
+                  <a name="validateLoginTitle">
+                  </a> <!-- validateLoginTitle -->
+                  <span class="method-name">validateLoginTitle</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -149,7 +135,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\anirudh.maloo\AppData\Local\Temp\testng-eclipse--202189621\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\anirudh.maloo\AppData\Local\Temp\testng-eclipse--1403216759\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -158,11 +144,7 @@
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Default suite&quot;&gt;
   &lt;test thread-count=&quot;5&quot; verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.brillio.test.Login&quot;&gt;
-        &lt;methods&gt;
-          &lt;include name=&quot;validCredentialTest&quot;/&gt;
-        &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- com.brillio.test.Login --&gt;
+      &lt;class name=&quot;com.brillio.test.LoginUITest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -202,20 +184,16 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'validCredentialTest')
-data.setCell(0, 2, 'com.brillio.test.Login')
-data.setCell(0, 3, 13808);
-data.setCell(1, 0, 1)
-data.setCell(1, 1, 'validCredentialTest')
-data.setCell(1, 2, 'com.brillio.test.Login')
-data.setCell(1, 3, 7504);
+data.setCell(0, 1, 'validateLoginTitle')
+data.setCell(0, 2, 'com.brillio.test.LoginUITest')
+data.setCell(0, 3, 18);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 21 seconds</span>
+              <span class="suite-total-time">Total running time: 18 ms</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -230,16 +208,9 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">1 ignored method</span>
+            <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">com.brillio.test.Login</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">invalidCredentialTest</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Default_suite" class="panel">
@@ -248,38 +219,26 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.brillio.test.Login</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.brillio.test.LoginUITest</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">start</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
-                <span class="method-name">setup(ch, public void com.brillio.test.Login.validCredentialTest(java.lang.String,java.lang.String,java.la...)</span>
-                <span class="method-start">1624 ms</span>
+                <span class="method-name">setup(ch, public void com.brillio.test.LoginUITest.validateLoginTitle())</span>
+                <span class="method-start">361 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">validCredentialTest(admin, pass, English (Indian), OpenEMR)</span>
-                <span class="method-start">15611 ms</span>
+                <span class="method-name">validateLoginTitle</span>
+                <span class="method-start">18602 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">teardown([TestResult name=validCredentialTest status=SUCCESS method=Login.validCredentialTest(java.lang.Strin...)</span>
-                <span class="method-start">29421 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">setup(ch, public void com.brillio.test.Login.validCredentialTest(java.lang.String,java.lang.String,java.la...)</span>
-                <span class="method-start">30930 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">validCredentialTest(physician, physician, Dutch, OpenEMR)</span>
-                <span class="method-start">40010 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">teardown([TestResult name=validCredentialTest status=SUCCESS method=Login.validCredentialTest(java.lang.Strin...)</span>
-                <span class="method-start">47515 ms</span>
+                <span class="method-name">teardown([TestResult name=validateLoginTitle status=SUCCESS method=LoginUITest.validateLoginTitle()[pri:0, in...)</span>
+                <span class="method-start">18622 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-suite after">
                 <span class="method-name">end</span>
-                <span class="method-start">49002 ms</span>
+                <span class="method-start">20215 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

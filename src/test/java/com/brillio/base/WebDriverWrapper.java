@@ -3,6 +3,8 @@ package com.brillio.base;
 import java.lang.reflect.Method;
 import java.time.Duration;
 
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -97,6 +99,10 @@ public class WebDriverWrapper {
 			test.skip(result.getThrowable());
 		}
 		
+		TakesScreenshot ts= (TakesScreenshot) driver;
+		String base64=ts.getScreenshotAs(OutputType.BASE64);
+		
+		test.addScreenCaptureFromBase64String(base64);
 		driver.quit();
 	}
 }
