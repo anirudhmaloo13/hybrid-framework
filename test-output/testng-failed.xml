@@ -1,16 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [OpenEMR Suite]">
+  <parameter name="browser" value="ch"/>
   <test thread-count="5" name="OpenEMR Test(failed)">
     <classes>
-      <class name="com.brillio.test.Login">
+      <class name="com.brillio.test.LoginUITest">
         <methods>
+          <include name="end"/>
           <include name="teardown"/>
-          <include name="validCredentialTest" invocation-numbers="0 1"/>
+          <include name="start"/>
           <include name="setup"/>
-          <include name="invalidCredentialTest" invocation-numbers="0 1 2"/>
+          <include name="validateLoginTitle"/>
         </methods>
-      </class> <!-- com.brillio.test.Login -->
+      </class> <!-- com.brillio.test.LoginUITest -->
     </classes>
   </test> <!-- OpenEMR Test(failed) -->
+  <test thread-count="5" name="OpenEMR Test2(failed)">
+    <parameter name="browser" value="edge"/>
+    <classes>
+      <class name="com.brillio.test.LoginUITest">
+        <methods>
+          <include name="end"/>
+          <include name="teardown"/>
+          <include name="start"/>
+          <include name="setup"/>
+          <include name="validateLoginTitle"/>
+        </methods>
+      </class> <!-- com.brillio.test.LoginUITest -->
+    </classes>
+  </test> <!-- OpenEMR Test2(failed) -->
 </suite> <!-- Failed suite [OpenEMR Suite] -->

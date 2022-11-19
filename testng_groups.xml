@@ -2,20 +2,20 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="OpenEMR Suite">
 
+	<groups>
+		<run>
+			<include name="low"></include>
+		</run>
+	</groups>
 	<parameter name="browser" value="ch"></parameter>
 	<test name="OpenEMR Test">
 
 		<classes>
 			<class name="com.brillio.test.LoginUITest" />
+			<class name="com.brillio.test.Login" />
 		</classes>
 	</test> <!-- Test -->
 
-	<test name="OpenEMR Test2">
-		<parameter name="browser" value="edge"></parameter>
-		<classes>
-			<class name="com.brillio.test.LoginUITest" />
-		</classes>
-	</test> <!-- Test -->
 
 
 

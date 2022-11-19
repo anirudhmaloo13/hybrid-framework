@@ -28,26 +28,28 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class WebDriverWrapper {
     protected  WebDriver driver;
-    private ExtentReports extent;
+    private static ExtentReports extent;
     protected ExtentTest test;
     
-    @BeforeSuite
+    @BeforeSuite(alwaysRun = true)
     public void start()
     {
+    	if(extent==null)
+    	{
     	ExtentSparkReporter spark=new ExtentSparkReporter("target/spark.html");
     	
     	extent=new ExtentReports();
     	
     	extent.attachReporter(spark);
     }
-	
-    @AfterSuite
+    }
+    @AfterSuite(alwaysRun = true)
     public void end()
     {
     	extent.flush();	
     }
     
-	@BeforeMethod
+	@BeforeMethod(alwaysRun = true)
 	@Parameters({"browser"})
 	// Before Method will trigger before each test method
 	public void setup(@Optional("ch") String browsername, Method method)
@@ -81,7 +83,7 @@ public class WebDriverWrapper {
 	}
 	
 	
-	@AfterMethod
+	@AfterMethod(alwaysRun = true)
 	//  After Method will trigger after each test method
 	public void teardown(ITestResult result)
 	{
